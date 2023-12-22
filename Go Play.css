@@ -1,0 +1,360 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-color: rgb(90, 90, 90);
+}
+#placePlateau{
+    width: 610px;
+    height: 610px;
+    border: 10px outset #000000;
+    float: left;
+
+}
+#plateau{
+    width: 570px;
+    height: 570px;
+    float: left;
+}
+.ligne{
+    float: left;
+}
+.case{
+    margin: 0px auto;
+    width: 30px;
+    height: 30px;
+}
+canvas{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    background-color: #ac8553;
+}
+img{
+    position: relative;
+    width: 30px;
+}
+#bordGauche, #bordDroit{
+    background-color: #ac8553;
+    width: 20px;
+    height: 570px;
+    float: left;
+}
+#bordBas, #bordHaut{
+    background-color: #ac8553;
+    width: 590px;
+    padding-left: 20px;
+    height: 20px;
+    float: left;
+}
+.bordGaucheElement, .bordDroitElement{
+    width: 20px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 14px;
+}
+.bordBasElement, .bordHautElement{
+    float: left;
+    width: 30px;
+    height: 20px;
+    text-align: center;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+#joueurAdverse{
+    height: 35px;
+    width: 480px;
+    padding-left: 20px;
+    float: left;
+    line-height: 35px;
+}
+#tempsJoueurAdverse{
+    height: 35px;
+    width: 130px;
+    float: left;
+    text-align: center;
+    line-height: 35px;
+}
+#joueur{
+    height: 35px;
+    width: 480px;
+    padding-left: 20px;
+    float: left;
+    line-height: 35px;
+}
+#tempsJoueur{
+    height: 35px;
+    width: 130px;
+    float: left;
+    text-align: center;
+    line-height: 35px;
+}
+#centre{
+    width: 630px;
+    height: 700px;
+    float: left;
+    font-size: 18px;
+    margin: calc(50vh - 350px) 0px;
+}
+#gauche{
+    float: left;
+    height: 700px;
+    width: calc(50% - 390px);
+    margin: calc(50vh - 350px) 0px;
+}
+#hTour{
+    height: 50px;
+    width: 100%;
+    text-align: center;
+    line-height: 50px;
+    margin: 0px;
+    margin-top: 100px;
+    
+
+}
+#idAQuiLeTour{
+    float: left;
+    width: 100px;
+    height: 100px;
+    margin: 0px calc(50% - 60px);
+    background-color: #ac8553;
+    border: 10px outset rgb(0, 0, 0);
+    margin-top: 20px;
+    margin-bottom: 130px;
+}
+#abandon{
+    float: left;
+    width: 30px;
+    height: 30px;
+    margin-left: calc(45% - 15px);
+}
+#passerSonTour{
+    float: left;
+    width: 30px;
+    height: 30px;
+    margin-left: calc(10% - 30px);
+}
+#retourDebutParti{
+    margin-left: calc(50% - 60px);
+}
+.avancerparti{
+    margin-top: 20px;
+    float: left;
+    width: 30px;
+    height: 30px;
+
+}
+#droit{
+    float: left;
+    width: calc(50% - 390px);
+    height: 700px;
+    margin: calc(50vh - 350px) 0px;
+}
+#pointBlanc{
+    width: 95%;
+    padding-left: 5%;
+    padding-top: 30px;
+}
+#pointNoir{
+    width: 95%;
+    padding-left: 5%;
+}
+#navigation{
+    background-color: rgb(41, 41, 41);
+    width: 150px;
+    height: 100vh;
+    color: white;
+    float: left;
+}
+#barrePlus{
+    background-color: rgb(74, 74, 74);
+    width: 130px;
+    height: 100vh;
+    position: absolute;
+    left: 150px;
+    color: white;
+}
+.boutonNavigation{
+    width: 150px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+}
+#nousContacter, #regles{
+    width: 130px;
+}
+#zoneReglage{
+    width: 700px;
+    height: 400px;
+    background-color: bisque;
+    position: absolute;
+    left: calc(50% - 350px);
+    top: calc(50% - 200px);
+}
+#zoneRegles{
+    width: 700px;
+    height: 400px;
+    background-color: bisque;
+    position: absolute;
+    left: calc(50% - 350px);
+    top: calc(50% - 200px);
+}
+#finDeParti{
+    position: absolute;
+    width: 50%;
+    height: 70%;
+    border-radius: 10%;
+    top: calc(50% - 35%);
+    left: calc(50% - 25%);
+    background-color: grey;
+}
+#h1FinDeParti{
+    width: 80%;
+    height: 20%;
+    margin-left: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: left;
+}
+#croixFinDeParti{
+    margin-top: 5%;
+    margin-right: 5%;
+    width: 30px;
+    float: right;
+}
+#h2Vainqueur{
+    width: 34%;
+    height: 10%;
+    margin: 0px 33%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aqua;
+    border-radius: 40px;
+}
+#h3Raison{
+    width: 100%;
+    height: 10%;
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#J1, #J2, #pointNoirFinal, #pointBlancFinal{
+    float: left;
+    width: 25%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+}
+#J1, #pointNoirFinal{
+    margin-right: 50%;
+}
+#rejouer{
+    width: 34%;
+    height: 10%;
+    margin: 0px 33%;
+    margin-top: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 167, 167);
+    border-radius: 30px;
+    box-shadow: 0px 7px rgb(0, 96, 96);
+}
+.choix{
+    float: left;
+    margin-left: 60px;
+    width: calc((100%/3) - 170px);
+    background-color: aqua;
+    height: 7vh;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    font-size: 20px;
+    margin-bottom: 4vh;
+}
+#choixTempsDiv{
+    margin-left: 120px;
+}
+#imgTemps, #imgGoban, #imgMode{
+    width: 36px;
+    float: left;
+    margin-left: calc(55% - 86px);
+}
+#choixTemps, #choixGoban, #choixMode{
+    float: left;
+    padding-left: 10px;
+    width: 90px;
+}
+#imgTempsPlus, #imgGobanPlus, #imgModePlus{
+    width: 36px;
+    float: left;
+    margin-left: calc(40% - 86px);
+}
+.listeChoix{
+    width: calc((100%/3) - 210px);
+    height: 5vh;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    background-color: blue;
+    font-size: 18px;
+    text-align: center;
+    position: absolute;
+    top: 29vh;
+}
+#listeChoixTemps{
+    left: 290px;
+}
+#listeChoixGoban{
+    right: calc((100%/3) - 210px + 240px);
+}
+#listeChoixMode{
+    right: 140px;
+}
+#tempsChoix1, #tempsChoix2{
+    height: inherit;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#gobanChoix1, #gobanChoix2, #gobanChoix3, #modeChoix1, #modeChoix2, #modeChoix3{
+    height: inherit;
+    width: calc(100%/3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#boutonJouer{
+    width: calc(100% - 390px);
+    height: 10vh;
+    margin-left: 120px;
+    margin-top: 6vh;
+    border-radius: 30px;
+    background-color: rgb(0, 167, 167);
+    box-shadow: 0px 10px rgb(0, 96, 96);
+    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+}
+.titrePage{
+    float: left;
+    width: calc(100% - 150px);
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: gray;
+    border-bottom-left-radius: 100%;
+    border-bottom-right-radius: 100%;
+    margin-bottom: 12vh;
+}

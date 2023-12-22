@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Go Play</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="Go Play.css">
+    </head>
+    <body>
+        <div id="navigation">
+            <div class="boutonNavigation" id="jouer">Jouer</div>
+            <div class="boutonNavigation" id="mesParties">Mes Parties</div>
+            <div class="boutonNavigation" id="profil">Profil</div>
+            <div class="boutonNavigation" id="classement">Classement</div>
+            <div class="boutonNavigation" id="reglage">Reglages</div>
+            <div class="boutonNavigation" id="plus">Plus</div>
+        </div>
+        <div id="zoneReglage">zone reglage</div>
+        <div id="barrePlus">
+            <div class="boutonNavigation" id="regles">Regles</div>
+            <a class="boutonNavigation" id="nousContacter" href="mailto:pierre.catrain@protonmail.com">Nous Contacter</a>
+        </div>
+        <div id="zoneRegles">les regles</div>
+        <div id="gauche">
+            <h2 id="hTour">Au tour de</h2>
+            <img id="idAQuiLeTour" src="img/target(1).svg" alt="">
+            <img id="abandon" src="img/flag.svg" alt=""></img>
+            <img id="passerSonTour" src="img/arrow-right-circle(1).svg" alt=""></img>
+            <img class="avancerparti" id="retourDebutParti" src="img/chevrons-left.svg" alt="">
+            <img class="avancerparti" id="retourUnCoup" src="img/chevron-left.svg" alt="">
+            <img class="avancerparti" id="avanceUnCoup" src="img/chevron-right.svg" alt="">
+            <img class="avancerparti" id="avanceFinParti" src="img/chevrons-right.svg" alt="">
+        </div>
+        <div id="centre">
+            <div id="joueurAdverse"><span id="J1Nom">Joueur 1</span><span id="J1Point"></span></div>
+            <div id="tempsJoueurAdverse">temps</div>
+            <section id="placePlateau">
+                <div id="bordHaut">
+                    <div class="bordHautElement" id="bordHautA">a</div>
+                    <div class="bordHautElement" id="bordHautB">b</div>
+                    <div class="bordHautElement" id="bordHautC">c</div>
+                    <div class="bordHautElement" id="bordHautD">d</div>
+                    <div class="bordHautElement" id="bordHautE">e</div>
+                    <div class="bordHautElement" id="bordHautF">f</div>
+                    <div class="bordHautElement" id="bordHautG">g</div>
+                    <div class="bordHautElement" id="bordHautH">h</div>
+                    <div class="bordHautElement" id="bordHautI">i</div>
+                    <div class="bordHautElement" id="bordHautJ">j</div>
+                    <div class="bordHautElement" id="bordHautK">k</div>
+                    <div class="bordHautElement" id="bordHautL">l</div>
+                    <div class="bordHautElement" id="bordHautM">m</div>
+                    <div class="bordHautElement" id="bordHautN">n</div>
+                    <div class="bordHautElement" id="bordHautO">o</div>
+                    <div class="bordHautElement" id="bordHautP">p</div>
+                    <div class="bordHautElement" id="bordHautQ">q</div>
+                    <div class="bordHautElement" id="bordHautR">r</div>
+                    <div class="bordHautElement" id="bordHautS">s</div> 
+                </div>
+                <div id="bordGauche">
+                    <div class="bordGaucheElement" id="bordGauche19">19</div>
+                    <div class="bordGaucheElement" id="bordGauche18">18</div>
+                    <div class="bordGaucheElement" id="bordGauche17">17</div>
+                    <div class="bordGaucheElement" id="bordGauche16">16</div>
+                    <div class="bordGaucheElement" id="bordGauche15">15</div>
+                    <div class="bordGaucheElement" id="bordGauche14">14</div>
+                    <div class="bordGaucheElement" id="bordGauche13">13</div>
+                    <div class="bordGaucheElement" id="bordGauche12">12</div>
+                    <div class="bordGaucheElement" id="bordGauche11">11</div>
+                    <div class="bordGaucheElement" id="bordGauche10">10</div>
+                    <div class="bordGaucheElement" id="bordGauche9">9</div>
+                    <div class="bordGaucheElement" id="bordGauche8">8</div>
+                    <div class="bordGaucheElement" id="bordGauche7">7</div>
+                    <div class="bordGaucheElement" id="bordGauche6">6</div>
+                    <div class="bordGaucheElement" id="bordGauche5">5</div>
+                    <div class="bordGaucheElement" id="bordGauche4">4</div>
+                    <div class="bordGaucheElement" id="bordGauche3">3</div>
+                    <div class="bordGaucheElement" id="bordGauche2">2</div>
+                    <div class="bordGaucheElement" id="bordGauche1">1</div>
+                </div>
+                <div id="plateau">
+                    <div class="ligne" id="ligne 18">
+                        <div class="case" id="div0/18"><canvas id="canvas0/18"></canvas><img id="0/18" src="" alt=""></div>
+                        <div class="case" id="div1/18"><canvas id="canvas1/18"></canvas><img id="1/18" src="" alt=""></div>
+                        <div class="case" id="div2/18"><canvas id="canvas2/18"></canvas><img id="2/18" src="" alt=""></div>
+                        <div class="case" id="div3/18"><canvas id="canvas3/18"></canvas><img id="3/18" src="" alt=""></div>
+                        <div class="case" id="div4/18"><canvas id="canvas4/18"></canvas><img id="4/18" src="" alt=""></div>
+                        <div class="case" id="div5/18"><canvas id="canvas5/18"></canvas><img id="5/18" src="" alt=""></div>
+                        <div class="case" id="div6/18"><canvas id="canvas6/18"></canvas><img id="6/18" src="" alt=""></div>
+                        <div class="case" id="div7/18"><canvas id="canvas7/18"></canvas><img id="7/18" src="" alt=""></div>
+                        <div class="case" id="div8/18"><canvas id="canvas8/18"></canvas><img id="8/18" src="" alt=""></div>
+                        <div class="case" id="div9/18"><canvas id="canvas9/18"></canvas><img id="9/18" src="" alt=""></div>
+                        <div class="case" id="div10/18"><canvas id="canvas10/18"></canvas><img id="10/18" src="" alt=""></div>
+                        <div class="case" id="div11/18"><canvas id="canvas11/18"></canvas><img id="11/18" src="" alt=""></div>
+                        <div class="case" id="div12/18"><canvas id="canvas12/18"></canvas><img id="12/18" src="" alt=""></div>
+                        <div class="case" id="div13/18"><canvas id="canvas13/18"></canvas><img id="13/18" src="" alt=""></div>
+                        <div class="case" id="div14/18"><canvas id="canvas14/18"></canvas><img id="14/18" src="" alt=""></div>
+                        <div class="case" id="div15/18"><canvas id="canvas15/18"></canvas><img id="15/18" src="" alt=""></div>
+                        <div class="case" id="div16/18"><canvas id="canvas16/18"></canvas><img id="16/18" src="" alt=""></div>
+                        <div class="case" id="div17/18"><canvas id="canvas17/18"></canvas><img id="17/18" src="" alt=""></div>
+                        <div class="case" id="div18/18"><canvas id="canvas18/18"></canvas><img id="18/18" src="" alt=""></div>
+                    </div>
+                    <div class="ligne" id="ligne 17">
+                        <div class="case" id="div0/17"><canvas id="canvas0/17"></canvas><img id="0/17" src="" alt=""></div>
+                        <div class="case" id="div1/17"><canvas id="canvas1/17"></canvas><img id="1/17" src="" alt=""></div>
+                        <div class="case" id="div2/17"><canvas id="canvas2/17"></canvas><img id="2/17" src="" alt=""></div>
+                        <div class="case" id="div3/17"><canvas id="canvas3/17"></canvas><img id="3/17" src="" alt=""></div>
+                        <div class="case" id="div4/17"><canvas id="canvas4/17"></canvas><img id="4/17" src="" alt=""></div>
+                        <div class="case" id="div5/17"><canvas id="canvas5/17"></canvas><img id="5/17" src="" alt=""></div>
+                        <div class="case" id="div6/17"><canvas id="canvas6/17"></canvas><img id="6/17" src="" alt=""></div>
+                        <div class="case" id="div7/17"><canvas id="canvas7/17"></canvas><img id="7/17" src="" alt=""></div>
+                        <div class="case" id="div8/17"><canvas id="canvas8/17"></canvas><img id="8/17" src="" alt=""></div>
+                        <div class="case" id="div9/17"><canvas id="canvas9/17"></canvas><img id="9/17" src="" alt=""></div>
+                        <div class="case" id="div10/17"><canvas id="canvas10/17"></canvas><img id="10/17" src="" alt=""></div>
+                        <div class="case" id="div11/17"><canvas id="canvas11/17"></canvas><img id="11/17" src="" alt=""></div>
+                        <div class="case" id="div12/17"><canvas id="canvas12/17"></canvas><img id="12/17" src="" alt=""></div>
+                        <div class="case" id="div13/17"><canvas id="canvas13/17"></canvas><img id="13/17" src="" alt=""></div>
+                        <div class="case" id="div14/17"><canvas id="canvas14/17"></canvas><img id="14/17" src="" alt=""></div>
+                        <div class="case" id="div15/17"><canvas id="canvas15/17"></canvas><img id="15/17" src="" alt=""></div>
+                        <div class="case" id="div16/17"><canvas id="canvas16/17"></canvas><img id="16/17" src="" alt=""></div>
+                        <div class="case" id="div17/17"><canvas id="canvas17/17"></canvas><img id="17/17" src="" alt=""></div>
+                        <div class="case" id="div18/17"><canvas id="canvas18/17"></canvas><img id="18/17" src="" alt=""></div>
+                    </div>
+                    <div class="ligne" id="ligne 16">
+                        <div class="case" id="div0/16"><canvas id="canvas0/16"></canvas><img id="0/16" src="" alt=""></div>
+                        <div class="case" id="div1/16"><canvas id="canvas1/16"></canvas><img id="1/16" src="" alt=""></div>
+                        <div class="case" id="div2/16"><canvas id="canvas2/16"></canvas><img id="2/16" src="" alt=""></div>
+                        <div class="case" id="div3/16"><canvas id="canvas3/16"></canvas><img id="3/16" src="" alt=""></div>
+                        <div class="case" id="div4/16"><canvas id="canvas4/16"></canvas><img id="4/16" src="" alt=""></div>
+                        <div class="case" id="div5/16"><canvas id="canvas5/16"></canvas><img id="5/16" src="" alt=""></div>
+                        <div class="case" id="div6/16"><canvas id="canvas6/16"></canvas><img id="6/16" src="" alt=""></div>
+                        <div class="case" id="div7/16"><canvas id="canvas7/16"></canvas><img id="7/16" src="" alt=""></div>
+                        <div class="case" id="div8/16"><canvas id="canvas8/16"></canvas><img id="8/16" src="" alt=""></div>
+                        <div class="case" id="div9/16"><canvas id="canvas9/16"></canvas><img id="9/16" src="" alt=""></div>
+                        <div class="case" id="div10/16"><canvas id="canvas10/16"></canvas><img id="10/16" src="" alt=""></div>
+                        <div class="case" id="div11/16"><canvas id="canvas11/16"></canvas><img id="11/16" src="" alt=""></div>
+                        <div class="case" id="div12/16"><canvas id="canvas12/16"></canvas><img id="12/16" src="" alt=""></div>
+                        <div class="case" id="div13/16"><canvas id="canvas13/16"></canvas><img id="13/16" src="" alt=""></div>
+                        <div class="case" id="div14/16"><canvas id="canvas14/16"></canvas><img id="14/16" src="" alt=""></div>
+                        <div class="case" id="div15/16"><canvas id="canvas15/16"></canvas><img id="15/16" src="" alt=""></div>
+                        <div class="case" id="div16/16"><canvas id="canvas16/16"></canvas><img id="16/16" src="" alt=""></div>
+                        <div class="case" id="div17/16"><canvas id="canvas17/16"></canvas><img id="17/16" src="" alt=""></div>
+                        <div class="case" id="div18/16"><canvas id="canvas18/16"></canvas><img id="18/16" src="" alt=""></div>
+                    </div>
+                    <div class="ligne" id="ligne 15">
+                        <div class="case" id="div0/15"><canvas id="canvas0/15"></canvas><img id="0/15" src="" alt=""></div>
+                        <div class="case" id="div1/15"><canvas id="canvas1/15"></canvas><img id="1/15" src="" alt=""></div>
+                        <div class="case" id="div2/15"><canvas id="canvas2/15"></canvas><img id="2/15" src="" alt=""></div>
+                        <div class="case" id="div3/15"><canvas id="canvas3/15"></canvas><img id="3/15" src="" alt=""></div>
+                        <div class="case" id="div4/15"><canvas id="canvas4/15"></canvas><img id="4/15" src="" alt=""></div>
+                        <div class="case" id="div5/15"><canvas id="canvas5/15"></canvas><img id="5/15" src="" alt=""></div>
+                        <div class="case" id="div6/15"><canvas id="canvas6/15"></canvas><img id="6/15" src="" alt=""></div>
+                        <div class="case" id="div7/15"><canvas id="canvas7/15"></canvas><img id="7/15" src="" alt=""></div>
+                        <div class="case" id="div8/15"><canvas id="canvas8/15"></canvas><img id="8/15" src="" alt=""></div>
+                        <div class="case" id="div9/15"><canvas id="canvas9/15"></canvas><img id="9/15" src="" alt=""></div>
+                        <div class="case" id="div10/15"><canvas id="canvas10/15"></canvas><img id="10/15" src="" alt=""></div>
+                        <div class="case" id="div11/15"><canvas id="canvas11/15"></canvas><img id="11/15" src="" alt=""></div>
+                        <div class="case" id="div12/15"><canvas id="canvas12/15"></canvas><img id="12/15" src="" alt=""></div>
+                        <div class="case" id="div13/15"><canvas id="canvas13/15"></canvas><img id="13/15" src="" alt=""></div>
+                        <div class="case" id="div14/15"><canvas id="canvas14/15"></canvas><img id="14/15" src="" alt=""></div>
+                        <div class="case" id="div15/15"><canvas id="canvas15/15"></canvas><img id="15/15" src="" alt=""></div>
+                        <div class="case" id="div16/15"><canvas id="canvas16/15"></canvas><img id="16/15" src="" alt=""></div>
+                        <div class="case" id="div17/15"><canvas id="canvas17/15"></canvas><img id="17/15" src="" alt=""></div>
+                        <div class="case" id="div18/15"><canvas id="canvas18/15"></canvas><img id="18/15" src="" alt=""></div>
+                    </div>
+                    <div class="ligne" id="ligne 14">
+                        <div class="case" id="div0/14"><canvas id="canvas0/14"></canvas><img id="0/14" src="" alt=""></div>
+                        <div class="case" id="div1/14"><canvas id="canvas1/14"></canvas><img id="1/14" src="" alt=""></div>
+                        <div class="case" id="div2/14"><canvas id="canvas2/14"></canvas><img id="2/14" src="" alt=""></div>
+                        <div class="case" id="div3/14"><canvas id="canvas3/14"></canvas><img id="3/14" src="" alt=""></div>
+                        <div class="case" id="div4/14"><canvas id="canvas4/14"></canvas><img id="4/14" src="" alt=""></div>
+                        <div class="case" id="div5/14"><canvas id="canvas5/14"></canvas><img id="5/14" src="" alt=""></div>
+                        <div class="case" id="div6/14"><canvas id="canvas6/14"></canvas><img id="6/14" src="" alt=""></div>
+                        <div class="case" id="div7/14"><canvas id="canvas7/14"></canvas><img id="7/14" src="" alt=""></div>
+                        <div class="case" id="div8/14"><canvas id="canvas8/14"></canvas><img id="8/14" src="" alt=""></div>
+                        <div class="case" id="div9/14"><canvas id="canvas9/14"></canvas><img id="9/14" src="" alt=""></div>
+                        <div class="case" id="div10/14"><canvas id="canvas10/14"></canvas><img id="10/14" src="" alt=""></div>
+                        <div class="case" id="div11/14"><canvas id="canvas11/14"></canvas><img id="11/14" src="" alt=""></div>
+                        <div class="case" id="div12/14"><canvas id="canvas12/14"></canvas><img id="12/14" src="" alt=""></div>
+                        <div class="case" id="div13/14"><canvas id="canvas13/14"></canvas><img id="13/14" src="" alt=""></div>
+                        <div class="case" id="div14/14"><canvas id="canvas14/14"></canvas><img id="14/14" src="" alt=""></div>
+                        <div class="case" id="div15/14"><canvas id="canvas15/14"></canvas><img id="15/14" src="" alt=""></div>
+                        <div class="case" id="div16/14"><canvas id="canvas16/14"></canvas><img id="16/14" src="" alt=""></div>
+                        <div class="case" id="div17/14"><canvas id="canvas17/14"></canvas><img id="17/14" src="" alt=""></div>
+                        <div class="case" id="div18/14"><canvas id="canvas18/14"></canvas><img id="18/14" src="" alt=""></div>
+                    </div>
+                    <div class="ligne" id="ligne 13">
+                        <div class="case" id="div0/13"><canvas id="canvas0/13"></canvas><img id="0/13" src="" alt=""></div>
+                        <div class="case" id="div1/13"><canvas id="canvas1/13"></canvas><img id="1/13" src="" alt=""></div>
+                        <div class="case" id="div2/13"><canvas id="canvas2/13"></canvas><img id="2/13" src="" alt=""></div>
+                        <div class="case" id="div3/13"><canvas id="canvas3/13"></canvas><img id="3/13" src="" alt=""></div>
+                        <div class="case" id="div4/13"><canvas id="canvas4/13"></canvas><img id="4/13" src="" alt=""></div>
+                        <div class="case" id="div5/13"><canvas id="canvas5/13"></canvas><img id="5/13" src="" alt=""></div>
+                        <div class="case" id="div6/13"><canvas id="canvas6/13"></canvas><img id="6/13" src="" alt=""></div>
+                        <div class="case" id="div7/13"><canvas id="canvas7/13"></canvas><img id="7/13" src="" alt=""></div>
+                        <div class="case" id="div8/13"><canvas id="canvas8/13"></canvas><img id="8/13" src="" alt=""></div>
+                        <div class="case" id="div9/13"><canvas id="canvas9/13"></canvas><img id="9/13" src="" alt=""></div>
+                        <div class="case" id="div10/13"><canvas id="canvas10/13"></canvas><img id="10/13" src="" alt=""></div>
+                        <div class="case" id="div11/13"><canvas id="canvas11/13"></canvas><img id="11/13" src="" alt=""></div>
+                        <div class="case" id="div12/13"><canvas id="canvas12/13"></canvas><img id="12/13" src="" alt=""></div>
+                        <div class="case" id="div13/13"><canvas id="canvas13/13"></canvas><img id="13/13" src="" alt=""></div>
+                        <div class="case" id="div14/13"><canvas id="canvas14/13"></canvas><img id="14/13" src="" alt=""></div>
+                        <div class="case" id="div15/13"><canvas id="canvas15/13"></canvas><img id="15/13" src="" alt=""></div>
+                        <div class="case" id="div16/13"><canvas id="canvas16/13"></canvas><img id="16/13" src="" alt=""></div>
+                        <div class="case" id="div17/13"><canvas id="canvas17/13"></canvas><img id="17/13" src="" alt=""></div>
+                        <div class="case" id="div18/13"><canvas id="canvas18/13"></canvas><img id="18/13" src="" alt=""></div>
+                    </div>
+                    <div class="ligne" id="ligne 12">
+                        <div class="case" id="div0/12"><canvas id="canvas0/12"></canvas><img id="0/12" src="" alt=""></div>
+                        <div class="case" id="div1/12"><canvas id="canvas1/12"></canvas><img id="1/12" src="" alt=""></div>
+                        <div class="case" id="div2/12"><canvas id="canvas2/12"></canvas><img id="2/12" src="" alt=""></div>
+                        <div class="case" id="div3/12"><canvas id="canvas3/12"></canvas><img id="3/12" src="" alt=""></div>
+                        <div class="case" id="div4/12"><canvas id="canvas4/12"></canvas><img id="4/12" src="" alt=""></div>
+                        <div class="case" id="div5/12"><canvas id="canvas5/12"></canvas><img id="5/12" src="" alt=""></div>
+                        <div class="case" id="div6/12"><canvas id="canvas6/12"></canvas><img id="6/12" src="" alt=""></div>
+                        <div class="case" id="div7/12"><canvas id="canvas7/12"></canvas><img id="7/12" src="" alt=""></div>
+                        <div class="case" id="div8/12"><canvas id="canvas8/12"></canvas><img id="8/12" src="" alt=""></div>
+                        <div class="case" id="div9/12"><canvas id="canvas9/12"></canvas><img id="9/12" src="" alt=""></div>
+                        <div class="case" id="div10/12"><canvas id="canvas10/12"></canvas><img id="10/12" src="" alt=""></div>
+                        <div class="case" id="div11/12"><canvas id="canvas11/12"></canvas><img id="11/12" src="" alt=""></div>
+                        <div class="case" id="div12/12"><canvas id="canvas12/12"></canvas><img id="12/12" src="" alt=""></div>
+                        <div class="case" id="div13/12"><canvas id="canvas13/12"></canvas><img id="13/12" src="" alt=""></div>
+                        <div class="case" id="div14/12"><canvas id="canvas14/12"></canvas><img id="14/12" src="" alt=""></div>
+                        <div class="case" id="div15/12"><canvas id="canvas15/12"></canvas><img id="15/12" src="" alt=""></div>
+                        <div class="case" id="div16/12"><canvas id="canvas16/12"></canvas><img id="16/12" src="" alt=""></div>
+                        <div class="case" id="div17/12"><canvas id="canvas17/12"></canvas><img id="17/12" src="" alt=""></div>
+                        <div class="case" id="div18/12"><canvas id="canvas18/12"></canvas><img id="18/12" src="" alt=""></div>
+                    </div>
+                    <div class="ligne" id="ligne 11">
+                        <div class="case" id="div0/11"><canvas id="canvas0/11"></canvas><img id="0/11" src="" alt=""></div>
+                        <div class="case" id="div1/11"><canvas id="canvas1/11"></canvas><img id="1/11" src="" alt=""></div>
+                        <div class="case" id="div2/11"><canvas id="canvas2/11"></canvas><img id="2/11" src="" alt=""></div>
+                        <div class="case" id="div3/11"><canvas id="canvas3/11"></canvas><img id="3/11" src="" alt=""></div>
+                        <div class="case" id="div4/11"><canvas id="canvas4/11"></canvas><img id="4/11" src="" alt=""></div>
+                        <div class="case" id="div5/11"><canvas id="canvas5/11"></canvas><img id="5/11" src="" alt=""></div>
+                        <div class="case" id="div6/11"><canvas id="canvas6/11"></canvas><img id="6/11" src="" alt=""></div>
+                        <div class="case" id="div7/11"><canvas id="canvas7/11"></canvas><img id="7/11" src="" alt=""></div>
+                        <div class="case" id="div8/11"><canvas id="canvas8/11"></canvas><img id="8/11" src="" alt=""></div>
+                        <div class="case" id="div9/11"><canvas id="canvas9/11"></canvas><img id="9/11" src="" alt=""></div>
+                        <div class="case" id="div10/11"><canvas id="canvas10/11"></canvas><img id="10/11" src="" alt=""></div>
+                        <div class="case" id="div11/11"><canvas id="canvas11/11"></canvas><img id="11/11" src="" alt=""></div>
+                        <div class="case" id="div12/11"><canvas id="canvas12/11"></canvas><img id="12/11" src="" alt=""></div>
+                        <div class="case" id="div13/11"><canvas id="canvas13/11"></canvas><img id="13/11" src="" alt=""></div>
+                        <div class="case" id="div14/11"><canvas id="canvas14/11"></canvas><img id="14/11" src="" alt=""></div>
+                        <div class="case" id="div15/11"><canvas id="canvas15/11"></canvas><img id="15/11" src="" alt=""></div>
+                        <div class="case" id="div16/11"><canvas id="canvas16/11"></canvas><img id="16/11" src="" alt=""></div>
+                        <div class="case" id="div17/11"><canvas id="canvas17/11"></canvas><img id="17/11" src="" alt=""></div>
+                        <div class="case" id="div18/11"><canvas id="canvas18/11"></canvas><img id="18/11" src="" alt=""></div>
+                    </div>
+                    <div class="ligne" id="ligne 10">
+                        <div class="case" id="div0/10"><canvas id="canvas0/10"></canvas><img id="0/10" src="" alt=""></div>
+                        <div class="case" id="div1/10"><canvas id="canvas1/10"></canvas><img id="1/10" src="" alt=""></div>
+                        <div class="case" id="div2/10"><canvas id="canvas2/10"></canvas><img id="2/10" src="" alt=""></div>
+                        <div class="case" id="div3/10"><canvas id="canvas3/10"></canvas><img id="3/10" src="" alt=""></div>
+                        <div class="case" id="div4/10"><canvas id="canvas4/10"></canvas><img id="4/10" src="" alt=""></div>
+                        <div class="case" id="div5/10"><canvas id="canvas5/10"></canvas><img id="5/10" src="" alt=""></div>
+                        <div class="case" id="div6/10"><canvas id="canvas6/10"></canvas><img id="6/10" src="" alt=""></div>
+                        <div class="case" id="div7/10"><canvas id="canvas7/10"></canvas><img id="7/10" src="" alt=""></div>
+                        <div class="case" id="div8/10"><canvas id="canvas8/10"></canvas><img id="8/10" src="" alt=""></div>
+                        <div class="case" id="div9/10"><canvas id="canvas9/10"></canvas><img id="9/10" src="" alt=""></div>
+                        <div class="case" id="div10/10"><canvas id="canvas10/10"></canvas><img id="10/10" src="" alt=""></div>
+                        <div class="case" id="div11/10"><canvas id="canvas11/10"></canvas><img id="11/10" src="" alt=""></div>
+                        <div class="case" id="div12/10"><canvas id="canvas12/10"></canvas><img id="12/10" src="" alt=""></div>
+                        <div class="case" id="div13/10"><canvas id="canvas13/10"></canvas><img id="13/10" src="" alt=""></div>
+                        <div class="case" id="div14/10"><canvas id="canvas14/10"></canvas><img id="14/10" src="" alt=""></div>
+                        <div class="case" id="div15/10"><canvas id="canvas15/10"></canvas><img id="15/10" src="" alt=""></div>
+                        <div class="case" id="div16/10"><canvas id="canvas16/10"></canvas><img id="16/10" src="" alt=""></div>
+                        <div class="case" id="div17/10"><canvas id="canvas17/10"></canvas><img id="17/10" src="" alt=""></div>
+                        <div class="case" id="div18/10"><canvas id="canvas18/10"></canvas><img id="18/10" src="" alt=""></div>
+                    </div>
+                    <div class="ligne" id="ligne 9">
+                        <div class="case" id="div0/9"><canvas id="canvas0/9"></canvas><img id="0/9" src="" alt=""></div>
+                        <div class="case" id="div1/9"><canvas id="canvas1/9"></canvas><img id="1/9" src="" alt=""></div>
+                        <div class="case" id="div2/9"><canvas id="canvas2/9"></canvas><img id="2/9" src="" alt=""></div>
+                        <div class="case" id="div3/9"><canvas id="canvas3/9"></canvas><img id="3/9" src="" alt=""></div>
+                        <div class="case" id="div4/9"><canvas id="canvas4/9"></canvas><img id="4/9" src="" alt=""></div>
+                        <div class="case" id="div5/9"><canvas id="canvas5/9"></canvas><img id="5/9" src="" alt=""></div>
+                        <div class="case" id="div6/9"><canvas id="canvas6/9"></canvas><img id="6/9" src="" alt=""></div>
+                        <div class="case" id="div7/9"><canvas id="canvas7/9"></canvas><img id="7/9" src="" alt=""></div>
+                        <div class="case" id="div8/9"><canvas id="canvas8/9"></canvas><img id="8/9" src="" alt=""></div>
+                        <div class="case" id="div9/9"><canvas id="canvas9/9"></canvas><img id="9/9" src="" alt=""></div>
+                        <div class="case" id="div10/9"><canvas id="canvas10/9"></canvas><img id="10/9" src="" alt=""></div>
+                        <div class="case" id="div11/9"><canvas id="canvas11/9"></canvas><img id="11/9" src="" alt=""></div>
+                        <div class="case" id="div12/9"><canvas id="canvas12/9"></canvas><img id="12/9" src="" alt=""></div>
+                        <div class="case" id="div13/9"><canvas id="canvas13/9"></canvas><img id="13/9" src="" alt=""></div>
+                        <div class="case" id="div14/9"><canvas id="canvas14/9"></canvas><img id="14/9" src="" alt=""></div>
+                        <div class="case" id="div15/9"><canvas id="canvas15/9"></canvas><img id="15/9" src="" alt=""></div>
+                        <div class="case" id="div16/9"><canvas id="canvas16/9"></canvas><img id="16/9" src="" alt=""></div>
+                        <div class="case" id="div17/9"><canvas id="canvas17/9"></canvas><img id="17/9" src="" alt=""></div>
+                        <div class="case" id="div18/9"><canvas id="canvas18/9"></canvas><img id="18/9" src="" alt=""></div>
+                    </div>
+                    <div class="ligne" id="ligne 8">
+                        <div class="case" id="div0/8"><canvas id="canvas0/8"></canvas><img id="0/8" src="" alt=""></div>
+                        <div class="case" id="div1/8"><canvas id="canvas1/8"></canvas><img id="1/8" src="" alt=""></div>
+                        <div class="case" id="div2/8"><canvas id="canvas2/8"></canvas><img id="2/8" src="" alt=""></div>
+                        <div class="case" id="div3/8"><canvas id="canvas3/8"></canvas><img id="3/8" src="" alt=""></div>
+                        <div class="case" id="div4/8"><canvas id="canvas4/8"></canvas><img id="4/8" src="" alt=""></div>
+                        <div class="case" id="div5/8"><canvas id="canvas5/8"></canvas><img id="5/8" src="" alt=""></div>
+                        <div class="case" id="div6/8"><canvas id="canvas6/8"></canvas><img id="6/8" src="" alt=""></div>
+                        <div class="case" id="div7/8"><canvas id="canvas7/8"></canvas><img id="7/8" src="" alt=""></div>
+                        <div class="case" id="div8/8"><canvas id="canvas8/8"></canvas><img id="8/8" src="" alt=""></div>
+                        <div class="case" id="div9/8"><canvas id="canvas9/8"></canvas><img id="9/8" src="" alt=""></div>
+                        <div class="case" id="div10/8"><canvas id="canvas10/8"></canvas><img id="10/8" src="" alt=""></div>
+                        <div class="case" id="div11/8"><canvas id="canvas11/8"></canvas><img id="11/8" src="" alt=""></div>
+                        <div class="case" id="div12/8"><canvas id="canvas12/8"></canvas><img id="12/8" src="" alt=""></div>
+                        <div class="case" id="div13/8"><canvas id="canvas13/8"></canvas><img id="13/8" src="" alt=""></div>
+                        <div class="case" id="div14/8"><canvas id="canvas14/8"></canvas><img id="14/8" src="" alt=""></div>
+                        <div class="case" id="div15/8"><canvas id="canvas15/8"></canvas><img id="15/8" src="" alt=""></div>
+                        <div class="case" id="div16/8"><canvas id="canvas16/8"></canvas><img id="16/8" src="" alt=""></div>
+                        <div class="case" id="div17/8"><canvas id="canvas17/8"></canvas><img id="17/8" src="" alt=""></div>
+                        <div class="case" id="div18/8"><canvas id="canvas18/8"></canvas><img id="18/8" src="" alt=""></div>
+                    </div>
+                    <div class="ligne" id="ligne 7">
+                        <div class="case" id="div0/7"><canvas id="canvas0/7"></canvas><img id="0/7" src="" alt=""></div>
+                        <div class="case" id="div1/7"><canvas id="canvas1/7"></canvas><img id="1/7" src="" alt=""></div>
+                        <div class="case" id="div2/7"><canvas id="canvas2/7"></canvas><img id="2/7" src="" alt=""></div>
+                        <div class="case" id="div3/7"><canvas id="canvas3/7"></canvas><img id="3/7" src="" alt=""></div>
+                        <div class="case" id="div4/7"><canvas id="canvas4/7"></canvas><img id="4/7" src="" alt=""></div>
+                        <div class="case" id="div5/7"><canvas id="canvas5/7"></canvas><img id="5/7" src="" alt=""></div>
+                        <div class="case" id="div6/7"><canvas id="canvas6/7"></canvas><img id="6/7" src="" alt=""></div>
+                        <div class="case" id="div7/7"><canvas id="canvas7/7"></canvas><img id="7/7" src="" alt=""></div>
+                        <div class="case" id="div8/7"><canvas id="canvas8/7"></canvas><img id="8/7" src="" alt=""></div>
+                        <div class="case" id="div9/7"><canvas id="canvas9/7"></canvas><img id="9/7" src="" alt=""></div>
+                        <div class="case" id="div10/7"><canvas id="canvas10/7"></canvas><img id="10/7" src="" alt=""></div>
+                        <div class="case" id="div11/7"><canvas id="canvas11/7"></canvas><img id="11/7" src="" alt=""></div>
+                        <div class="case" id="div12/7"><canvas id="canvas12/7"></canvas><img id="12/7" src="" alt=""></div>
+                        <div class="case" id="div13/7"><canvas id="canvas13/7"></canvas><img id="13/7" src="" alt=""></div>
+                        <div class="case" id="div14/7"><canvas id="canvas14/7"></canvas><img id="14/7" src="" alt=""></div>
+                        <div class="case" id="div15/7"><canvas id="canvas15/7"></canvas><img id="15/7" src="" alt=""></div>
+                        <div class="case" id="div16/7"><canvas id="canvas16/7"></canvas><img id="16/7" src="" alt=""></div>
+                        <div class="case" id="div17/7"><canvas id="canvas17/7"></canvas><img id="17/7" src="" alt=""></div>
+                        <div class="case" id="div18/7"><canvas id="canvas18/7"></canvas><img id="18/7" src="" alt=""></div>
+                    </div>
+                    <div class="ligne" id="ligne 6">
+                        <div class="case" id="div0/6"><canvas id="canvas0/6"></canvas><img id="0/6" src="" alt=""></div>
+                        <div class="case" id="div1/6"><canvas id="canvas1/6"></canvas><img id="1/6" src="" alt=""></div>
+                        <div class="case" id="div2/6"><canvas id="canvas2/6"></canvas><img id="2/6" src="" alt=""></div>
+                        <div class="case" id="div3/6"><canvas id="canvas3/6"></canvas><img id="3/6" src="" alt=""></div>
+                        <div class="case" id="div4/6"><canvas id="canvas4/6"></canvas><img id="4/6" src="" alt=""></div>
+                        <div class="case" id="div5/6"><canvas id="canvas5/6"></canvas><img id="5/6" src="" alt=""></div>
+                        <div class="case" id="div6/6"><canvas id="canvas6/6"></canvas><img id="6/6" src="" alt=""></div>
+                        <div class="case" id="div7/6"><canvas id="canvas7/6"></canvas><img id="7/6" src="" alt=""></div>
+                        <div class="case" id="div8/6"><canvas id="canvas8/6"></canvas><img id="8/6" src="" alt=""></div>
+                        <div class="case" id="div9/6"><canvas id="canvas9/6"></canvas><img id="9/6" src="" alt=""></div>
+                        <div class="case" id="div10/6"><canvas id="canvas10/6"></canvas><img id="10/6" src="" alt=""></div>
+                        <div class="case" id="div11/6"><canvas id="canvas11/6"></canvas><img id="11/6" src="" alt=""></div>
+                        <div class="case" id="div12/6"><canvas id="canvas12/6"></canvas><img id="12/6" src="" alt=""></div>
+                        <div class="case" id="div13/6"><canvas id="canvas13/6"></canvas><img id="13/6" src="" alt=""></div>
+                        <div class="case" id="div14/6"><canvas id="canvas14/6"></canvas><img id="14/6" src="" alt=""></div>
+                        <div class="case" id="div15/6"><canvas id="canvas15/6"></canvas><img id="15/6" src="" alt=""></div>
+                        <div class="case" id="div16/6"><canvas id="canvas16/6"></canvas><img id="16/6" src="" alt=""></div>
+                        <div class="case" id="div17/6"><canvas id="canvas17/6"></canvas><img id="17/6" src="" alt=""></div>
+                        <div class="case" id="div18/6"><canvas id="canvas18/6"></canvas><img id="18/6" src="" alt=""></div>
+                    </div>
+                    <div class="ligne" id="ligne 5">
+                        <div class="case" id="div0/5"><canvas id="canvas0/5"></canvas><img id="0/5" src="" alt=""></div>
+                        <div class="case" id="div1/5"><canvas id="canvas1/5"></canvas><img id="1/5" src="" alt=""></div>
+                        <div class="case" id="div2/5"><canvas id="canvas2/5"></canvas><img id="2/5" src="" alt=""></div>
+                        <div class="case" id="div3/5"><canvas id="canvas3/5"></canvas><img id="3/5" src="" alt=""></div>
+                        <div class="case" id="div4/5"><canvas id="canvas4/5"></canvas><img id="4/5" src="" alt=""></div>
+                        <div class="case" id="div5/5"><canvas id="canvas5/5"></canvas><img id="5/5" src="" alt=""></div>
+                        <div class="case" id="div6/5"><canvas id="canvas6/5"></canvas><img id="6/5" src="" alt=""></div>
+                        <div class="case" id="div7/5"><canvas id="canvas7/5"></canvas><img id="7/5" src="" alt=""></div>
+                        <div class="case" id="div8/5"><canvas id="canvas8/5"></canvas><img id="8/5" src="" alt=""></div>
+                        <div class="case" id="div9/5"><canvas id="canvas9/5"></canvas><img id="9/5" src="" alt=""></div>
+                        <div class="case" id="div10/5"><canvas id="canvas10/5"></canvas><img id="10/5" src="" alt=""></div>
+                        <div class="case" id="div11/5"><canvas id="canvas11/5"></canvas><img id="11/5" src="" alt=""></div>
+                        <div class="case" id="div12/5"><canvas id="canvas12/5"></canvas><img id="12/5" src="" alt=""></div>
+                        <div class="case" id="div13/5"><canvas id="canvas13/5"></canvas><img id="13/5" src="" alt=""></div>
+                        <div class="case" id="div14/5"><canvas id="canvas14/5"></canvas><img id="14/5" src="" alt=""></div>
+                        <div class="case" id="div15/5"><canvas id="canvas15/5"></canvas><img id="15/5" src="" alt=""></div>
+                        <div class="case" id="div16/5"><canvas id="canvas16/5"></canvas><img id="16/5" src="" alt=""></div>
+                        <div class="case" id="div17/5"><canvas id="canvas17/5"></canvas><img id="17/5" src="" alt=""></div>
+                        <div class="case" id="div18/5"><canvas id="canvas18/5"></canvas><img id="18/5" src="" alt=""></div>
+                    </div>
+                    <div class="ligne" id="ligne 4">
+                        <div class="case" id="div0/4"><canvas id="canvas0/4"></canvas><img id="0/4" src="" alt=""></div>
+                        <div class="case" id="div1/4"><canvas id="canvas1/4"></canvas><img id="1/4" src="" alt=""></div>
+                        <div class="case" id="div2/4"><canvas id="canvas2/4"></canvas><img id="2/4" src="" alt=""></div>
+                        <div class="case" id="div3/4"><canvas id="canvas3/4"></canvas><img id="3/4" src="" alt=""></div>
+                        <div class="case" id="div4/4"><canvas id="canvas4/4"></canvas><img id="4/4" src="" alt=""></div>
+                        <div class="case" id="div5/4"><canvas id="canvas5/4"></canvas><img id="5/4" src="" alt=""></div>
+                        <div class="case" id="div6/4"><canvas id="canvas6/4"></canvas><img id="6/4" src="" alt=""></div>
+                        <div class="case" id="div7/4"><canvas id="canvas7/4"></canvas><img id="7/4" src="" alt=""></div>
+                        <div class="case" id="div8/4"><canvas id="canvas8/4"></canvas><img id="8/4" src="" alt=""></div>
+                        <div class="case" id="div9/4"><canvas id="canvas9/4"></canvas><img id="9/4" src="" alt=""></div>
+                        <div class="case" id="div10/4"><canvas id="canvas10/4"></canvas><img id="10/4" src="" alt=""></div>
+                        <div class="case" id="div11/4"><canvas id="canvas11/4"></canvas><img id="11/4" src="" alt=""></div>
+                        <div class="case" id="div12/4"><canvas id="canvas12/4"></canvas><img id="12/4" src="" alt=""></div>
+                        <div class="case" id="div13/4"><canvas id="canvas13/4"></canvas><img id="13/4" src="" alt=""></div>
+                        <div class="case" id="div14/4"><canvas id="canvas14/4"></canvas><img id="14/4" src="" alt=""></div>
+                        <div class="case" id="div15/4"><canvas id="canvas15/4"></canvas><img id="15/4" src="" alt=""></div>
+                        <div class="case" id="div16/4"><canvas id="canvas16/4"></canvas><img id="16/4" src="" alt=""></div>
+                        <div class="case" id="div17/4"><canvas id="canvas17/4"></canvas><img id="17/4" src="" alt=""></div>
+                        <div class="case" id="div18/4"><canvas id="canvas18/4"></canvas><img id="18/4" src="" alt=""></div>
+                    </div>
+                    <div class="ligne" id="ligne 3">
+                        <div class="case" id="div0/3"><canvas id="canvas0/3"></canvas><img id="0/3" src="" alt=""></div>
+                        <div class="case" id="div1/3"><canvas id="canvas1/3"></canvas><img id="1/3" src="" alt=""></div>
+                        <div class="case" id="div2/3"><canvas id="canvas2/3"></canvas><img id="2/3" src="" alt=""></div>
+                        <div class="case" id="div3/3"><canvas id="canvas3/3"></canvas><img id="3/3" src="" alt=""></div>
+                        <div class="case" id="div4/3"><canvas id="canvas4/3"></canvas><img id="4/3" src="" alt=""></div>
+                        <div class="case" id="div5/3"><canvas id="canvas5/3"></canvas><img id="5/3" src="" alt=""></div>
+                        <div class="case" id="div6/3"><canvas id="canvas6/3"></canvas><img id="6/3" src="" alt=""></div>
+                        <div class="case" id="div7/3"><canvas id="canvas7/3"></canvas><img id="7/3" src="" alt=""></div>
+                        <div class="case" id="div8/3"><canvas id="canvas8/3"></canvas><img id="8/3" src="" alt=""></div>
+                        <div class="case" id="div9/3"><canvas id="canvas9/3"></canvas><img id="9/3" src="" alt=""></div>
+                        <div class="case" id="div10/3"><canvas id="canvas10/3"></canvas><img id="10/3" src="" alt=""></div>
+                        <div class="case" id="div11/3"><canvas id="canvas11/3"></canvas><img id="11/3" src="" alt=""></div>
+                        <div class="case" id="div12/3"><canvas id="canvas12/3"></canvas><img id="12/3" src="" alt=""></div>
+                        <div class="case" id="div13/3"><canvas id="canvas13/3"></canvas><img id="13/3" src="" alt=""></div>
+                        <div class="case" id="div14/3"><canvas id="canvas14/3"></canvas><img id="14/3" src="" alt=""></div>
+                        <div class="case" id="div15/3"><canvas id="canvas15/3"></canvas><img id="15/3" src="" alt=""></div>
+                        <div class="case" id="div16/3"><canvas id="canvas16/3"></canvas><img id="16/3" src="" alt=""></div>
+                        <div class="case" id="div17/3"><canvas id="canvas17/3"></canvas><img id="17/3" src="" alt=""></div>
+                        <div class="case" id="div18/3"><canvas id="canvas18/3"></canvas><img id="18/3" src="" alt=""></div>
+                    </div>
+                    <div class="ligne" id="ligne 2">
+                        <div class="case" id="div0/2"><canvas id="canvas0/2"></canvas><img id="0/2" src="" alt=""></div>
+                        <div class="case" id="div1/2"><canvas id="canvas1/2"></canvas><img id="1/2" src="" alt=""></div>
+                        <div class="case" id="div2/2"><canvas id="canvas2/2"></canvas><img id="2/2" src="" alt=""></div>
+                        <div class="case" id="div3/2"><canvas id="canvas3/2"></canvas><img id="3/2" src="" alt=""></div>
+                        <div class="case" id="div4/2"><canvas id="canvas4/2"></canvas><img id="4/2" src="" alt=""></div>
+                        <div class="case" id="div5/2"><canvas id="canvas5/2"></canvas><img id="5/2" src="" alt=""></div>
+                        <div class="case" id="div6/2"><canvas id="canvas6/2"></canvas><img id="6/2" src="" alt=""></div>
+                        <div class="case" id="div7/2"><canvas id="canvas7/2"></canvas><img id="7/2" src="" alt=""></div>
+                        <div class="case" id="div8/2"><canvas id="canvas8/2"></canvas><img id="8/2" src="" alt=""></div>
+                        <div class="case" id="div9/2"><canvas id="canvas9/2"></canvas><img id="9/2" src="" alt=""></div>
+                        <div class="case" id="div10/2"><canvas id="canvas10/2"></canvas><img id="10/2" src="" alt=""></div>
+                        <div class="case" id="div11/2"><canvas id="canvas11/2"></canvas><img id="11/2" src="" alt=""></div>
+                        <div class="case" id="div12/2"><canvas id="canvas12/2"></canvas><img id="12/2" src="" alt=""></div>
+                        <div class="case" id="div13/2"><canvas id="canvas13/2"></canvas><img id="13/2" src="" alt=""></div>
+                        <div class="case" id="div14/2"><canvas id="canvas14/2"></canvas><img id="14/2" src="" alt=""></div>
+                        <div class="case" id="div15/2"><canvas id="canvas15/2"></canvas><img id="15/2" src="" alt=""></div>
+                        <div class="case" id="div16/2"><canvas id="canvas16/2"></canvas><img id="16/2" src="" alt=""></div>
+                        <div class="case" id="div17/2"><canvas id="canvas17/2"></canvas><img id="17/2" src="" alt=""></div>
+                        <div class="case" id="div18/2"><canvas id="canvas18/2"></canvas><img id="18/2" src="" alt=""></div>
+                    </div>
+                    <div class="ligne" id="ligne 1">
+                        <div class="case" id="div0/1"><canvas id="canvas0/1"></canvas><img id="0/1" src="" alt=""></div>
+                        <div class="case" id="div1/1"><canvas id="canvas1/1"></canvas><img id="1/1" src="" alt=""></div>
+                        <div class="case" id="div2/1"><canvas id="canvas2/1"></canvas><img id="2/1" src="" alt=""></div>
+                        <div class="case" id="div3/1"><canvas id="canvas3/1"></canvas><img id="3/1" src="" alt=""></div>
+                        <div class="case" id="div4/1"><canvas id="canvas4/1"></canvas><img id="4/1" src="" alt=""></div>
+                        <div class="case" id="div5/1"><canvas id="canvas5/1"></canvas><img id="5/1" src="" alt=""></div>
+                        <div class="case" id="div6/1"><canvas id="canvas6/1"></canvas><img id="6/1" src="" alt=""></div>
+                        <div class="case" id="div7/1"><canvas id="canvas7/1"></canvas><img id="7/1" src="" alt=""></div>
+                        <div class="case" id="div8/1"><canvas id="canvas8/1"></canvas><img id="8/1" src="" alt=""></div>
+                        <div class="case" id="div9/1"><canvas id="canvas9/1"></canvas><img id="9/1" src="" alt=""></div>
+                        <div class="case" id="div10/1"><canvas id="canvas10/1"></canvas><img id="10/1" src="" alt=""></div>
+                        <div class="case" id="div11/1"><canvas id="canvas11/1"></canvas><img id="11/1" src="" alt=""></div>
+                        <div class="case" id="div12/1"><canvas id="canvas12/1"></canvas><img id="12/1" src="" alt=""></div>
+                        <div class="case" id="div13/1"><canvas id="canvas13/1"></canvas><img id="13/1" src="" alt=""></div>
+                        <div class="case" id="div14/1"><canvas id="canvas14/1"></canvas><img id="14/1" src="" alt=""></div>
+                        <div class="case" id="div15/1"><canvas id="canvas15/1"></canvas><img id="15/1" src="" alt=""></div>
+                        <div class="case" id="div16/1"><canvas id="canvas16/1"></canvas><img id="16/1" src="" alt=""></div>
+                        <div class="case" id="div17/1"><canvas id="canvas17/1"></canvas><img id="17/1" src="" alt=""></div>
+                        <div class="case" id="div18/1"><canvas id="canvas18/1"></canvas><img id="18/1" src="" alt=""></div>
+                    </div>
+                    <div class="ligne" id="ligne 0">
+                        <div class="case" id="div0/0"><canvas id="canvas0/0"></canvas><img id="0/0" src="" alt=""></div>
+                        <div class="case" id="div1/0"><canvas id="canvas1/0"></canvas><img id="1/0" src="" alt=""></div>
+                        <div class="case" id="div2/0"><canvas id="canvas2/0"></canvas><img id="2/0" src="" alt=""></div>
+                        <div class="case" id="div3/0"><canvas id="canvas3/0"></canvas><img id="3/0" src="" alt=""></div>
+                        <div class="case" id="div4/0"><canvas id="canvas4/0"></canvas><img id="4/0" src="" alt=""></div>
+                        <div class="case" id="div5/0"><canvas id="canvas5/0"></canvas><img id="5/0" src="" alt=""></div>
+                        <div class="case" id="div6/0"><canvas id="canvas6/0"></canvas><img id="6/0" src="" alt=""></div>
+                        <div class="case" id="div7/0"><canvas id="canvas7/0"></canvas><img id="7/0" src="" alt=""></div>
+                        <div class="case" id="div8/0"><canvas id="canvas8/0"></canvas><img id="8/0" src="" alt=""></div>
+                        <div class="case" id="div9/0"><canvas id="canvas9/0"></canvas><img id="9/0" src="" alt=""></div>
+                        <div class="case" id="div10/0"><canvas id="canvas10/0"></canvas><img id="10/0" src="" alt=""></div>
+                        <div class="case" id="div11/0"><canvas id="canvas11/0"></canvas><img id="11/0" src="" alt=""></div>
+                        <div class="case" id="div12/0"><canvas id="canvas12/0"></canvas><img id="12/0" src="" alt=""></div>
+                        <div class="case" id="div13/0"><canvas id="canvas13/0"></canvas><img id="13/0" src="" alt=""></div>
+                        <div class="case" id="div14/0"><canvas id="canvas14/0"></canvas><img id="14/0" src="" alt=""></div>
+                        <div class="case" id="div15/0"><canvas id="canvas15/0"></canvas><img id="15/0" src="" alt=""></div>
+                        <div class="case" id="div16/0"><canvas id="canvas16/0"></canvas><img id="16/0" src="" alt=""></div>
+                        <div class="case" id="div17/0"><canvas id="canvas17/0"></canvas><img id="17/0" src="" alt=""></div>
+                        <div class="case" id="div18/0"><canvas id="canvas18/0"></canvas><img id="18/0" src="" alt=""></div>
+                    </div>
+                </div>
+                <div id="bordDroit">
+                    <div class="bordDroitElement" id="bordDroit19">19</div>
+                    <div class="bordDroitElement" id="bordDroit18">18</div>
+                    <div class="bordDroitElement" id="bordDroit17">17</div>
+                    <div class="bordDroitElement" id="bordDroit16">16</div>
+                    <div class="bordDroitElement" id="bordDroit15">15</div>
+                    <div class="bordDroitElement" id="bordDroit14">14</div>
+                    <div class="bordDroitElement" id="bordDroit13">13</div>
+                    <div class="bordDroitElement" id="bordDroit12">12</div>
+                    <div class="bordDroitElement" id="bordDroit11">11</div>
+                    <div class="bordDroitElement" id="bordDroit10">10</div>
+                    <div class="bordDroitElement" id="bordDroit9">9</div>
+                    <div class="bordDroitElement" id="bordDroit8">8</div>
+                    <div class="bordDroitElement" id="bordDroit7">7</div>
+                    <div class="bordDroitElement" id="bordDroit6">6</div>
+                    <div class="bordDroitElement" id="bordDroit5">5</div>
+                    <div class="bordDroitElement" id="bordDroit4">4</div>
+                    <div class="bordDroitElement" id="bordDroit3">3</div>
+                    <div class="bordDroitElement" id="bordDroit2">2</div>
+                    <div class="bordDroitElement" id="bordDroit1">1</div>
+                </div>
+                <div id="bordBas">
+                    <div class="bordBasElement" id="bordBasA">a</div>
+                    <div class="bordBasElement" id="bordBasB">b</div>
+                    <div class="bordBasElement" id="bordBasC">c</div>
+                    <div class="bordBasElement" id="bordBasD">d</div>
+                    <div class="bordBasElement" id="bordBasE">e</div>
+                    <div class="bordBasElement" id="bordBasF">f</div>
+                    <div class="bordBasElement" id="bordBasG">g</div>
+                    <div class="bordBasElement" id="bordBasH">h</div>
+                    <div class="bordBasElement" id="bordBasI">i</div>
+                    <div class="bordBasElement" id="bordBasJ">j</div>
+                    <div class="bordBasElement" id="bordBasK">k</div>
+                    <div class="bordBasElement" id="bordBasL">l</div>
+                    <div class="bordBasElement" id="bordBasM">m</div>
+                    <div class="bordBasElement" id="bordBasN">n</div>
+                    <div class="bordBasElement" id="bordBasO">o</div>
+                    <div class="bordBasElement" id="bordBasP">p</div>
+                    <div class="bordBasElement" id="bordBasQ">q</div>
+                    <div class="bordBasElement" id="bordBasR">r</div>
+                    <div class="bordBasElement" id="bordBasS">s</div> 
+                </div>
+            </section>
+            <div id="joueur"><span id="J2Nom">Joueur 2</span><span id="J2Point"></span></div>
+            <div id="tempsJoueur">temps</div>
+        </div>
+        <div id="droit">
+            <h2 id="pointBlanc">Point blanc : <span id="spanPointBlanc"></span></h2>
+            <h2 id="pointNoir">Point noir : <span id="spanPointNoir"></span></h2>
+        </div>
+        <div id="finDeParti">
+            <h1 id="h1FinDeParti">Fin de parti</h1>
+            <img id="croixFinDeParti" src="img/x.svg" alt="">
+            <h2 id="h2Vainqueur">Victoire des&nbsp;<span id="couleurVainqueur"></span></h2>
+            <h3 id="h3Raison"></h3>
+            <div id="J1"><span id="J1Nom">Joueur 1</span><span id="J1Point"></span></div>
+            <div id="J2"><span id="J2Nom">Joueur 2</span><span id="J2Point"></span></div>
+            <h2 id="pointNoirFinal">Point noir : <span id="spanPointNoirFinal"></span></h2>
+            <h2 id="pointBlancFinal">Point blanc : <span id="spanPointBlancFinal"></span></h2>
+            <div id="rejouer">Rejouer une partie</div>
+        </div>
+        <script src="Go Play Goban.js"></script>
+    </body>
+</html>
